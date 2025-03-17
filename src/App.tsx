@@ -7,16 +7,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import Dropfile from "@/components/dropfile"
 
 
 function App() {
   return (
     <>
-      <div className="h-screen flex items-center justify-center">
-        <div>
-          <Button>Click here</Button> 
-        </div>
-
+      <div className="h-screen flex flex-col items-center justify-center">
         <div>
           <Select>
             <SelectTrigger className="w-[180px]">
@@ -27,6 +24,12 @@ function App() {
               <SelectItem value="MSSQL">MSSQL</SelectItem>
             </SelectContent>
           </Select>
+        </div>
+        <div>
+          <Dropfile/>
+        </div>
+        <div>
+          <Button>Parse</Button> 
         </div>
       </div>
     </>
