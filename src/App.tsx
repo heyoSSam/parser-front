@@ -13,8 +13,8 @@ import Dropfile from "@/components/dropfile"
 function App() {
   return (
     <>
-      <div className="h-screen flex flex-col items-center justify-center">
-        <div>
+      <div className="h-screen flex flex-col justify-center">
+        <div className="my-3">
           <Select>
             <SelectTrigger className="w-[180px]">
               <SelectValue placeholder="Format" />
@@ -25,10 +25,12 @@ function App() {
             </SelectContent>
           </Select>
         </div>
-        <div>
+
+        <div className="my-3">
           <Dropfile/>
         </div>
-        <div>
+
+        <div className="my-3">
           <Button>Parse</Button> 
         </div>
       </div>

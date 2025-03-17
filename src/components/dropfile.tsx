@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { UploadCloud } from "lucide-react";
 
 interface FileItem {
     name: string;
@@ -35,6 +36,7 @@ export default function FileDropZone() {
                 onDrop={handleDrop}
                 onDragOver={handleDragOver}
             >
+                <UploadCloud className="mx-auto mb-2 w-10 h-10 text-black-500" />
                 <p className="text-sm text-gray-500">Drag & drop files here or click below to upload</p>
                 <input
                     type="file"
