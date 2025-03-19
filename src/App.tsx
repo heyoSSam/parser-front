@@ -1,21 +1,25 @@
-import './App.css'
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import './App.css';
+import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
-import Dropfile from "@/components/dropfile"
-
+} from "@/components/ui/select";
+import Dropfile from "@/components/dropfile";
 
 function App() {
+  const [format, setFormat] = useState(""); // Store format selection
+
+  const handleFormatChange = (value: any) => setFormat(value);
+
   return (
     <>
       <div className="h-screen flex flex-col justify-center">
         <div className="my-3">
-          <Select>
+          <Select onValueChange={handleFormatChange}>
             <SelectTrigger className="w-[180px]">
               <SelectValue placeholder="Format" />
             </SelectTrigger>
@@ -27,15 +31,11 @@ function App() {
         </div>
 
         <div className="my-3">
-          <Dropfile/>
-        </div>
-
-        <div className="my-3">
-          <Button>Parse</Button> 
+          <Dropfile format={format} />
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
