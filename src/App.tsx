@@ -1,6 +1,5 @@
 import { useState } from "react";
 import './App.css';
-import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
@@ -11,8 +10,7 @@ import {
 import Dropfile from "@/components/dropfile";
 
 function App() {
-  const [format, setFormat] = useState(""); // Store format selection
-
+  const [format, setFormat] = useState(""); 
   const handleFormatChange = (value: any) => setFormat(value);
 
   return (
@@ -25,7 +23,7 @@ function App() {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="CSV">CSV</SelectItem>
-              <SelectItem value="MSSQL">MSSQL</SelectItem>
+              <SelectItem value="SQL">SQL</SelectItem>
             </SelectContent>
           </Select>
         </div>

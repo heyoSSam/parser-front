@@ -66,6 +66,7 @@ export default function FileDropZone({ format }: DropfileProps) {
             link.remove();
 
             window.location.reload();
+            alert("Please check the file manually.")
         } catch (error) {
             console.error("Error uploading file:", error);
             alert("Failed to upload file.");
